@@ -6,6 +6,7 @@ import {
   TextInput,
   Button,
   TouchableHighlight,
+  Alert,
 } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 
@@ -57,7 +58,29 @@ const Formulario = () => {
 
   // Funcion crear paciente
   const crearPaciente = (e) => {
+    // Validación
+    if (
+      (paciente.trim() === "" ||
+        telefono.trim() === "" ||
+        email.trim() === "" ||
+        fecha.trim() === "",
+      hora.trim() === "" || sintomas.trim() === "")
+    ) {
+      // falla la validación
+    }
     console.log(e);
+  };
+
+  // Muestra alerta si falla la validación
+  const mostrarAlerta = () => {
+    Alert.alert(
+      "Error", // Título
+      "Todos los campos son obligatorios"[ // Mensaje,
+        {
+          text: "OK", // Arreglo de botones
+        }
+      ]
+    );
   };
 
   return (
