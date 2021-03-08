@@ -9,8 +9,9 @@ import {
   ScrollView,
 } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
+import shortid from "shortid";
 
-const Formulario = () => {
+const Formulario = ({ citas, setCitas, guardarMostrarForm }) => {
   // State de inputs
   const [paciente, guardarPaciente] = useState("");
   const [telefono, guardarTelefono] = useState("");
@@ -70,6 +71,18 @@ const Formulario = () => {
       // falla la validación
       mostrarAlerta();
     }
+
+    // Crear una nueva cita
+    const cita = { paciente, email, telefono, sintomas, fecha, hora };
+
+    cita.id = shortid.generate();
+
+    // Agregar al State
+    const actualizacionCitas = [...citas, cita];
+    setCitas(actualizacionCitas);
+
+    // Ocultar el formulario
+    guardarMostrarForm(false);
   };
 
   // Muestra alerta si falla la validación

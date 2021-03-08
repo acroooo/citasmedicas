@@ -51,7 +51,11 @@ const App = () => {
           {mostrarForm ? (
             <>
               <Text style={styles.subtitulo}>Crear nueva cita</Text>
-              <Formulario />
+              <Formulario
+                citas={citas}
+                setCitas={setCitas}
+                guardarMostrarForm={guardarMostrarForm}
+              />
             </>
           ) : (
             <>
