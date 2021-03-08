@@ -154,7 +154,7 @@ const Formulario = () => {
             style={styles.input}
             keyboardType="default"
           />
-          <TouchableHighlight onPress={crearPaciente} style={styles.button}>
+          <TouchableHighlight onPress={crearPaciente} style={styles.btnCrearP}>
             <Text style={styles.btnText}>Crear Paciente</Text>
           </TouchableHighlight>
         </View>
@@ -194,6 +194,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#191919",
     fontSize: 15,
+  },
+  btnCrearP: {
+    marginHorizontal: 20,
+    padding: 10,
+    backgroundColor: "#FFF05A",
+    marginTop: 30,
+    marginBottom: 30,
   },
 });
 export default Formulario;
