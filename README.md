@@ -5,3 +5,5 @@ Aplicación creada con React Native / Expo para la creación y visualización de
 - Instalar dependencias
 - expo start
 - Correr la aplicación en un emulador Android / ios
+
+## Preview
