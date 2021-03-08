@@ -25,18 +25,21 @@ const App = () => {
       <View style={styles.contenedor}>
         <Text style={styles.titulo}>APP CITAS MÉDICAS</Text>
 
-        <Formulario />
+        <View style={styles.contenido}>
+          <Formulario />
 
-        <Text style={styles.subtitulo}>
-          {citas.length > 0 ? "Administra tus citas" : "No existen citas"}
-        </Text>
-        <FlatList
-          data={citas}
-          renderItem={({ item }) => (
-            <Cita cita={item} eliminarPaciente={eliminarPaciente} />
-          )}
-          keyExtractor={(cita) => cita.id}
-        />
+          <Text style={styles.subtitulo}>
+            {citas.length > 0 ? "Administra tus citas" : "No existen citas"}
+          </Text>
+          <FlatList
+            style={styles.listado}
+            data={citas}
+            renderItem={({ item }) => (
+              <Cita cita={item} eliminarPaciente={eliminarPaciente} />
+            )}
+            keyExtractor={(cita) => cita.id}
+          />
+        </View>
       </View>
     </>
   );
@@ -45,6 +48,13 @@ const App = () => {
 const styles = StyleSheet.create({
   contenedor: {
     backgroundColor: "#FF481F",
+    flex: 1,
+  },
+  contenido: {
+    flex: 1,
+    marginHorizontal: "2.5%",
+  },
+  listado: {
     flex: 1,
   },
   titulo: {

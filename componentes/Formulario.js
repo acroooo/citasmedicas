@@ -4,9 +4,9 @@ import {
   Text,
   View,
   TextInput,
-  Button,
   TouchableHighlight,
   Alert,
+  ScrollView,
 } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 
@@ -60,32 +60,35 @@ const Formulario = () => {
   const crearPaciente = (e) => {
     // Validación
     if (
-      (paciente.trim() === "" ||
-        telefono.trim() === "" ||
-        email.trim() === "" ||
-        fecha.trim() === "",
-      hora.trim() === "" || sintomas.trim() === "")
+      paciente.trim() === "" ||
+      telefono.trim() === "" ||
+      email.trim() === "" ||
+      fecha.trim() === "" ||
+      hora.trim() === "" ||
+      sintomas.trim() === ""
     ) {
       // falla la validación
+      mostrarAlerta();
     }
-    console.log(e);
   };
 
   // Muestra alerta si falla la validación
   const mostrarAlerta = () => {
     Alert.alert(
       "Error", // Título
-      "Todos los campos son obligatorios"[ // Mensaje,
+      "Todos los campos son obligatorios",
+      [
+        // Mensaje,
         {
           text: "OK", // Arreglo de botones
-        }
+        },
       ]
     );
   };
 
   return (
     <>
-      <View>
+      <ScrollView style={styles.formulario}>
         <View>
           <Text style={styles.label}>Paciente</Text>
           <TextInput
@@ -151,19 +154,21 @@ const Formulario = () => {
             style={styles.input}
             keyboardType="default"
           />
-          <TouchableHighlight
-            onPress={(e) => crearPaciente}
-            style={styles.button}
-          >
+          <TouchableHighlight onPress={crearPaciente} style={styles.button}>
             <Text style={styles.btnText}>Crear Paciente</Text>
           </TouchableHighlight>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  formulario: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginHorizontal: "2.5%",
+  },
   label: {
     fontWeight: "bold",
     fontSize: 19,
