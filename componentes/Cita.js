@@ -1,9 +1,9 @@
-import React from 'react';
-import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, TouchableHighlight } from "react-native";
 
-const Cita = ({cita, eliminarPaciente}) => {
+const Cita = ({ cita, eliminarPaciente }) => {
   const dialogoEliminar = (id) => {
-    console.log('Eliminando...');
+    console.log("Eliminando...");
     eliminarPaciente(id);
   };
 
@@ -14,8 +14,16 @@ const Cita = ({cita, eliminarPaciente}) => {
         <Text style={styles.texto}>{cita.paciente}</Text>
       </View>
       <View>
-        <Text style={styles.label}>Propietario: </Text>
-        <Text style={styles.texto}>{cita.propietario}</Text>
+        <Text style={styles.label}>Fecha: </Text>
+        <Text style={styles.texto}>{cita.fecha}</Text>
+      </View>
+      <View>
+        <Text style={styles.label}>Email: </Text>
+        <Text style={styles.texto}>{cita.email}</Text>
+      </View>
+      <View>
+        <Text style={styles.label}>Teléfono: </Text>
+        <Text style={styles.texto}>{cita.telefono}</Text>
       </View>
       <View>
         <Text style={styles.label}>Síntomas: </Text>
@@ -23,8 +31,10 @@ const Cita = ({cita, eliminarPaciente}) => {
       </View>
       <View>
         <TouchableHighlight
+          underlayColor="#FFA10A"
           onPress={() => dialogoEliminar(cita.id)}
-          style={styles.btnEliminar}>
+          style={styles.btnEliminar}
+        >
           <Text style={styles.btnText}>Eliminar</Text>
         </TouchableHighlight>
       </View>
@@ -34,18 +44,18 @@ const Cita = ({cita, eliminarPaciente}) => {
 
 const styles = StyleSheet.create({
   cita: {
-    backgroundColor: '#FF481F',
-    borderStyle: 'solid',
+    backgroundColor: "#FF481F",
+    borderStyle: "solid",
     borderBottomWidth: 1,
     borderTopWidth: 1,
-    borderColor: '#FFF05A',
+    borderColor: "#FFF05A",
     paddingVertical: 20,
     paddingHorizontal: 10,
     marginHorizontal: 10,
     marginVertical: 6,
   },
   label: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 19,
     marginTop: 20,
   },
@@ -54,13 +64,13 @@ const styles = StyleSheet.create({
   },
   btnEliminar: {
     padding: 10,
-    backgroundColor: '#FFF05A',
+    backgroundColor: "#FFF05A",
     marginTop: 30,
   },
   btnText: {
-    textAlign: 'center',
-    fontWeight: 'bold',
-    color: '#191919',
+    textAlign: "center",
+    fontWeight: "bold",
+    color: "#191919",
     fontSize: 15,
   },
 });

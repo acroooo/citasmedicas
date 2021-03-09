@@ -2348,6 +2348,24 @@
     "split-string" "^3.0.2"
     "to-regex" "^3.0.1"
 
+"browserlist@^1.0.1":
+  "integrity" "sha512-nYq9jiWv+qXcgrJxQzivfEc7Wo2GvAKkeRViE5L3cUJpq4SZO6NZR710I/8T+OjE5BPECbzpm8rpUkwslE3nTg=="
+  "resolved" "https://registry.npmjs.org/browserlist/-/browserlist-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "chalk" "^2.4.1"
+
+"browserslist@^4.14.5", "browserslist@^4.16.3":
+  "integrity" "sha512-vIyhWmIkULaq04Gt93txdh+j02yX/JzlyhLYbV3YQCn/zvES3JnY7TifHHvvr1w5hTDluNKMkV05cs4vy8Q7sw=="
+  "resolved" "https://registry.npmjs.org/browserslist/-/browserslist-4.16.3.tgz"
+  "version" "4.16.3"
+  dependencies:
+    "caniuse-lite" "^1.0.30001181"
+    "colorette" "^1.2.1"
+    "electron-to-chromium" "^1.3.649"
+    "escalade" "^3.1.1"
+    "node-releases" "^1.1.70"
+
 "bser@2.1.1":
   "integrity" "sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ=="
   "resolved" "https://registry.yarnpkg.com/bser/-/bser-2.1.1.tgz"
@@ -2434,6 +2452,11 @@
   "integrity" "sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg=="
   "resolved" "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz"
   "version" "5.3.1"
+
+"caniuse-lite@^1.0.30001181":
+  "integrity" "sha512-8aE+sqBqtXz4G8g35Eg/XEaFr2N7rd/VQ6eABGBmNtcB8cN6qNJhMi6oSFy4UWWZgqgL3filHT8Nha4meu3tsw=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001197.tgz"
+  "version" "1.0.30001197"
 
 "capture-exit@^2.0.0":
   "integrity" "sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g=="
@@ -2576,7 +2599,7 @@
     "color-name" "^1.0.0"
     "simple-swizzle" "^0.2.2"
 
-"colorette@^1.0.7":
+"colorette@^1.0.7", "colorette@^1.2.1":
   "integrity" "sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w=="
   "resolved" "https://registry.yarnpkg.com/colorette/-/colorette-1.2.2.tgz"
   "version" "1.2.2"
@@ -2902,6 +2925,11 @@
   "resolved" "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz"
   "version" "1.1.1"
 
+"electron-to-chromium@^1.3.649":
+  "integrity" "sha512-8mFfiAesXdEdE0DhkMKO7W9U6VU/9T3VTWwZ+4g84/YMP4kgwgFtQgUxuu7FUMcvSeKSNhFQNU+WZ68BQTLT5A=="
+  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.683.tgz"
+  "version" "1.3.683"
+
 "emitter-listener@^1.0.1", "emitter-listener@^1.1.1":
   "integrity" "sha512-Bt1sBAGFHY9DKY+4/2cV6izcKJUf5T7/gkdmkxzX/qv9CcGH8xSwVRW5mtX03SWJtRTWSOpzCuWN9rBFYZepZQ=="
   "resolved" "https://registry.npmjs.org/emitter-listener/-/emitter-listener-1.1.2.tgz"
@@ -3009,6 +3037,11 @@
     "is-callable" "^1.1.4"
     "is-date-object" "^1.0.1"
     "is-symbol" "^1.0.2"
+
+"escalade@^3.1.1":
+  "integrity" "sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw=="
+  "resolved" "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz"
+  "version" "3.1.1"
 
 "escape-html@~1.0.3":
   "integrity" "sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg="
@@ -4855,6 +4888,11 @@
   "integrity" "sha1-jZ2+KJZKSsVxLpExZCEHxx6Q7EA="
   "resolved" "https://registry.yarnpkg.com/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz"
   "version" "1.0.0"
+
+"node-releases@^1.1.70":
+  "integrity" "sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg=="
+  "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-1.1.71.tgz"
+  "version" "1.1.71"
 
 "node-stream-zip@^1.9.1":
   "integrity" "sha512-159NUO3quDIRVSVOQiQ/0VG8NFrGvVyUa+MUUleiOys3NLtrGtNkodqYYTRHU/kiXu/ygHZcNy/tZ4NUCcDUmQ=="

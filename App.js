@@ -46,17 +46,17 @@ const App = () => {
             <TouchableHighlight
               onPress={() => mostrarFormulario()}
               style={styles.button}
+              underlayColor="#FFA10A"
             >
-              <Text style={styles.btnText}>Crear Paciente</Text>
+              <Text style={styles.btnText}>
+                {mostrarForm ? "Cancelar nueva cita" : "Crear nueva cita"}
+              </Text>
             </TouchableHighlight>
           </View>
 
           <View style={styles.contenido}>
             {mostrarForm ? (
               <>
-                <Text style={styles.subtitulo}>
-                  {mostrarForm ? "Cancelar nueva cita" : "Crear nueva cita"}
-                </Text>
                 <Formulario
                   citas={citas}
                   setCitas={setCitas}

@@ -127,7 +127,11 @@ const Formulario = ({ citas, setCitas, guardarMostrarForm }) => {
           />
         </View>
         <View>
-          <TouchableHighlight onPress={showDatePicker} style={styles.button}>
+          <TouchableHighlight
+            underlayColor="#FFA10A"
+            onPress={showDatePicker}
+            style={styles.button}
+          >
             <Text style={styles.btnText}>Fecha Cita</Text>
           </TouchableHighlight>
           <DateTimePickerModal
@@ -143,7 +147,11 @@ const Formulario = ({ citas, setCitas, guardarMostrarForm }) => {
           <Text>{fecha}</Text>
         </View>
         <View>
-          <TouchableHighlight onPress={showTimePicker} style={styles.button}>
+          <TouchableHighlight
+            underlayColor="#FFA10A"
+            onPress={showTimePicker}
+            style={styles.button}
+          >
             <Text style={styles.btnText}>Hora Cita</Text>
           </TouchableHighlight>
           <DateTimePickerModal
@@ -167,7 +175,11 @@ const Formulario = ({ citas, setCitas, guardarMostrarForm }) => {
             style={styles.input}
             keyboardType="default"
           />
-          <TouchableHighlight onPress={crearPaciente} style={styles.btnCrearP}>
+          <TouchableHighlight
+            underlayColor="#FFA10A"
+            onPress={crearPaciente}
+            style={styles.btnCrearP}
+          >
             <Text style={styles.btnText}>Crear Paciente</Text>
           </TouchableHighlight>
         </View>
@@ -212,6 +224,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     padding: 10,
     backgroundColor: "#FFF05A",
+    marginTop: 30,
+    marginBottom: 30,
+  },
+  sinFocus: {
+    marginHorizontal: 20,
+    padding: 10,
+    backgroundColor: "#FFA10A",
     marginTop: 30,
     marginBottom: 30,
   },
